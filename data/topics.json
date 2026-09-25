@@ -1,0 +1,79 @@
+{
+    "topics": [
+        {
+            "id": "elektriciteit",
+            "parent": null,
+            "title": "Elektriciteit",
+            "description": "Ontdek elektrische grootheden, schakelingen, magnetisme en elektrische toepassingen.",
+
+            "children": [
+                {
+                    "title": "Basisbegrippen",
+                    "icon": "⚡",
+                    "description": "Spanning, stroom, weerstand en vermogen.",
+                    "type": "topic",
+                    "target": "basisbegrippen"
+                },
+                {
+                    "title": "Schakelingen",
+                    "icon": "🔌",
+                    "description": "Serie-, parallel- en gemengde schakelingen.",
+                    "type": "topic",
+                    "target": "schakelingen"
+                },
+                {
+                    "title": "Magnetisme",
+                    "icon": "🧲",
+                    "description": "Magnetische velden, elektromagnetisme en Lorentzkracht.",
+                    "type": "topic",
+                    "target": "magnetisme"
+                },
+                {
+                    "title": "Huishoudelijke elektriciteit",
+                    "icon": "🏠",
+                    "description": "Installaties, beveiligingen, schema's en toepassingen.",
+                    "type": "topic",
+                    "target": "huishoudelijke-elektriciteit"
+                }
+            ]
+        },
+
+        {
+            "id": "basisbegrippen",
+            "parent": "elektriciteit",
+            "title": "Basisbegrippen elektriciteit",
+            "description": "De fundamentele grootheden en principes van elektriciteit.",
+
+            "children": [
+                {
+                    "title": "Spanning",
+                    "icon": "🔋",
+                    "description": "Wat elektrische spanning is en hoe we ze meten.",
+                    "type": "topic",
+                    "target": "spanning"
+                },
+                {
+                    "title": "Stroom",
+                    "icon": "⚡",
+                    "description": "Elektrische stroom en stroomsterkte.",
+                    "type": "topic",
+                    "target": "stroom"
+                },
+                {
+                    "title": "Weerstand",
+                    "icon": "Ω",
+                    "description": "Elektrische weerstand en de eenheid ohm.",
+                    "type": "topic",
+                    "target": "weerstand"
+                },
+                {
+                    "title": "Wet van Ohm",
+                    "icon": "U=R·I",
+                    "description": "Het verband tussen spanning, stroom en weerstand.",
+                    "type": "topic",
+                    "target": "wet-van-ohm"
+                }
+            ]
+        }
+    ]
+}

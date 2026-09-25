@@ -1,3 +1,5 @@
+console.log("STEMWORX JS NIEUWE VERSIE GELADEN");
+
 async function loadNavigation() {
     try {
         const response = await fetch("./data/navigation.json");
@@ -12,8 +14,11 @@ async function loadNavigation() {
 
         const container = document.getElementById("tile-grid");
 
+        container.innerHTML = "";
+
         data.categories.forEach(category => {
             const tile = document.createElement("article");
+
             tile.className = "tile";
 
             tile.innerHTML = `
@@ -26,7 +31,10 @@ async function loadNavigation() {
             `;
 
             tile.addEventListener("click", () => {
-                console.log("Open:", category.path);
+                console.log("GEKLIKT:", category.id);
+
+                window.location.href =
+    `/topic?id=${encodeURIComponent(category.id)}`;
             });
 
             container.appendChild(tile);

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STEMWORX</title>
+
+    <link rel="stylesheet" href="./assets/css/stemworx.css">
+</head>
+
+<body>
+
+<main class="app">
+
+    <header class="topbar">
+
+        <div class="logo">
+            STEMWORX
+        </div>
+
+        <div class="top-actions">
+            <button class="icon-button" onclick="history.back()" title="Terug">
+                ←
+            </button>
+
+            <button class="icon-button" onclick="location.href='./index.html'" title="Start">
+                🏠
+            </button>
+
+            <button class="icon-button" title="Zoeken">
+                🔍
+            </button>
+        </div>
+
+    </header>
+
+    <nav id="breadcrumb" class="breadcrumb">
+        STEMWORX
+    </nav>
+
+    <section class="hero">
+
+        <h1 id="topic-title">
+            Onderwerp laden...
+        </h1>
+
+        <p id="topic-description"></p>
+
+    </section>
+
+    <section
+        id="tile-grid"
+        class="tile-grid">
+    </section>
+
+</main>
+
+<script src="./assets/js/topic.js"></script>
+
+</body>
+</html>

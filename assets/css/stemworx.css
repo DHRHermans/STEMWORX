@@ -125,3 +125,30 @@ body {
         min-height: 170px;
     }
 }
+
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 24px;
+
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.breadcrumb a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.breadcrumb span {
+    opacity: 0.5;
+}
