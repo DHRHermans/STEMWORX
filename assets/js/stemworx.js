@@ -1,7 +1,9 @@
-console.log("STEMWORX JS NIEUWE VERSIE GELADEN");
+console.log("STEMWORX JS - dynamische navigatie geladen");
 
 async function loadNavigation() {
+
     try {
+
         const response = await fetch("./data/navigation.json");
 
         if (!response.ok) {
@@ -10,19 +12,30 @@ async function loadNavigation() {
 
         const data = await response.json();
 
-        document.getElementById("app-name").textContent = data.app.name;
+        const appName = document.getElementById("app-name");
+
+        if (appName) {
+            appName.textContent = data.app.name;
+        }
 
         const container = document.getElementById("tile-grid");
+
+        if (!container) {
+            throw new Error("tile-grid werd niet gevonden.");
+        }
 
         container.innerHTML = "";
 
         data.categories.forEach(category => {
+
             const tile = document.createElement("article");
 
             tile.className = "tile";
 
             tile.innerHTML = `
-                <div class="tile-icon">${category.icon}</div>
+                <div class="tile-icon">
+                    ${category.icon}
+                </div>
 
                 <div>
                     <h2>${category.title}</h2>
@@ -31,21 +44,32 @@ async function loadNavigation() {
             `;
 
             tile.addEventListener("click", () => {
+
                 console.log("GEKLIKT:", category.id);
 
                 window.location.href =
-    `/topic?id=${encodeURIComponent(category.id)}`;
+                    `./topic.html?id=${encodeURIComponent(category.id)}`;
+
             });
 
             container.appendChild(tile);
+
         });
 
     } catch (error) {
-        console.error(error);
 
-        document.getElementById("tile-grid").innerHTML =
-            "<p>De STEMWORX-navigatie kon niet geladen worden.</p>";
+        console.error("Fout bij laden STEMWORX-navigatie:", error);
+
+        const container = document.getElementById("tile-grid");
+
+        if (container) {
+            container.innerHTML =
+                "<p>De STEMWORX-navigatie kon niet geladen worden.</p>";
+        }
+
     }
+
 }
+
 
 loadNavigation();
