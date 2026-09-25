@@ -1,0 +1,17 @@
+# Persoonlijke/lokale bronnen
+sources/cursussen/
+sources/documenten/
+
+# Tijdelijke bestanden van de AI Builder
+builder/output/
+builder/temp/
+
+# Node.js
+node_modules/
+
+# Lokale instellingen
+.vscode/
+
+# Windows
+Thumbs.db
+desktop.ini

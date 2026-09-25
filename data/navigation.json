@@ -1,0 +1,40 @@
+{
+  "app": {
+    "name": "STEMWORX",
+    "version": "0.1"
+  },
+
+  "categories": [
+    {
+      "id": "elektriciteit",
+      "title": "Elektriciteit",
+      "icon": "⚡",
+      "description": "Elektrische grootheden, schakelingen en toepassingen.",
+      "path": "content/elektriciteit/"
+    },
+
+    {
+      "id": "mechanica",
+      "title": "Mechanica",
+      "icon": "⚙️",
+      "description": "Krachten, beweging, arbeid, vermogen en machines.",
+      "path": "content/mechanica/"
+    },
+
+    {
+      "id": "techniek",
+      "title": "Techniek",
+      "icon": "🔧",
+      "description": "Technische systemen, materialen en processen.",
+      "path": "content/techniek/"
+    },
+
+    {
+      "id": "ict",
+      "title": "ICT",
+      "icon": "💻",
+      "description": "Computers, digitale technologie en programmeren.",
+      "path": "content/ict/"
+    }
+  ]
+}
